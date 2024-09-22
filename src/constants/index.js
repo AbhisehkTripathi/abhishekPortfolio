@@ -93,7 +93,7 @@ import { FaGolang } from "react-icons/fa6";
 
 import { DiCss3, DiJava, DiMsqlServer, DiRuby } from "react-icons/di";
 
-export const resumeLink = "";
+export const resumeLink = "https://drive.google.com/file/d/1leqfOf-_ENjydFHzL-AfFIclU58ftspT/view";
 export const repoLink = "https://github.com/AbhisehkTripathi";
 
 export const callToAction =
