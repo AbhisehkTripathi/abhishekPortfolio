@@ -23,7 +23,7 @@ import cash_flow from "./cash_flow.jpg";
 import freadom from "./freadom.jpg";
 import ecell from "./ecell.png";
 import bank from "./bank.jpg";
-import abhishekImage from './abhishekImage.jpg';
+import abhishekImage from './abhishek.png';
 import mumbaiUni from "./mumbaiUni.png";
 import gdsc from "./gdsc.png";
 import iris from "./iris.png";

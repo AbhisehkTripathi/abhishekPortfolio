@@ -11,11 +11,14 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="text-center sm:text-left">
-            <h3 className="font-poppins font-bold text-lg text-textPrimary-light dark:text-textPrimary-dark">
-              {aboutMe.name}
+            <h3 className="font-poppins font-bold text-lg text-textPrimary-light dark:text-textPrimary-dark mb-2">
+              Abhishek Tripathi
             </h3>
             <p className="font-poppins font-normal text-sm text-textSecondary-light dark:text-textSecondary-dark">
-              © {currentYear}
+              © 2025
+            </p>
+            <p className="font-poppins font-normal text-sm text-textSecondary-light dark:text-textSecondary-dark">
+              All rights reserved
             </p>
           </div>
 
