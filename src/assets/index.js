@@ -33,12 +33,18 @@ import todo from "./todo.jpg";
 import graphql from "./graphql.png";
 import portfolio from "./portfolio.jpg";
 import zulip from "./zulip.jpg";
+import linkedcare from "./linkedCare.png";
+import abhahealthcard from "./abha.svg";
+import blupack from "./BluPack-Logo.svg";
+import vallngoproject from "./vall-logo.png";
+import documentmanagement from "./dms.svg";
 import publiclab from "./publiclab.png";
 import cdc from "./cdc.png";
 import chargeswap from "./chargeswap.png";
 import placeicon from "./place-icon.svg";
 import recruitment from "./recruitment.png";
 import huntly from "./huntly.png";
+import dmacq from "./dmacq.svg";
 import oracle from "./oracle.jpg";
 import sigmoid from "./sigmoid.png";
 import comicify_ai from "./comicify-ai.png";
@@ -53,6 +59,7 @@ import dennisivy from "./dennisivy.png";
 import manipal from "./manipal.png";
 import icon from "./icon.jpg";
 import ethforall from "./ethforall.png";
+import simandhar from "./Simandhar-Logo.png";
 
 export {
   quotes,
@@ -85,6 +92,12 @@ export {
   portfolio,
   publiclab,
   zulip,
+  linkedcare,
+  abhahealthcard,
+  blupack,
+  vallngoproject,
+  documentmanagement,
+  dmacq,
   cdc,
   parthmittal,
   profilePic,
@@ -109,5 +122,6 @@ export {
   adroit,
   ethforall,
   mumbaiUni,
-  abhishekImage
+  abhishekImage,
+  simandhar
 };

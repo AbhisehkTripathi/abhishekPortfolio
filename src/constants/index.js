@@ -31,6 +31,13 @@ import {
   manipal,
   icon,
   ethforall,
+  linkedcare,
+  abhahealthcard,
+  dmacq,
+  blupack,
+  vallngoproject,
+  documentmanagement,
+  simandhar,
 } from "../assets";
 
 import {
@@ -83,9 +90,16 @@ import {
   SiNextdotjs,
   SiMicrosoftazure,
   SiPhp,
+  SiElasticsearch,
+  SiNodedotjs,
+  SiPostgresql,
+  SiMongodb,
+  SiAmazondynamodb,
+  SiSupabase,
+  SiRedis,
 } from "react-icons/si";
 
-import { FaHardHat, FaRust } from "react-icons/fa";
+import { FaHardHat } from "react-icons/fa";
 
 import { IoIosNotificationsOutline } from "react-icons/io";
 
@@ -101,20 +115,20 @@ export const callToAction =
 
 export const navLinks = [
   {
-    id: "skills",
-    title: "Skills & Experience",
+    id: "about",
+    title: "About",
   },
   {
-    id: "education",
-    title: "Education",
+    id: "techstack",
+    title: "Tech Stack",
   },
   {
-    id: "achievements",
-    title: "Achievements",
+    id: "projects",
+    title: "Projects",
   },
   {
-    id: "contactMe",
-    title: "Contact Me",
+    id: "experience",
+    title: "Experience",
   },
 ];
 
@@ -148,112 +162,142 @@ export const achievements = [
 
 export const skills = [
   {
-    title: "Programming Languages",
+    title: "Frontend",
     items: [
       {
-        id: "pl-10",
-        icon: SiJavascript,
-        name: "JavaScript",
-      },
-      {
-        id: "pl-5",
-        icon: SiPhp,
-        name: "PHP",
-      },
-      {
-        id: "pl-2",
-        icon: SiPython,
-        name: "Python",
-      },
-      {
-        id: "pl-5",
-        icon: FaRust,
-        name: "Rust",
-      },
-    ],
-  },
-  {
-    title: "Frameworks/Libraries",
-    items: [
-      {
-        id: "f-3",
+        id: "fe-1",
         icon: SiReact,
-        name: "ReactJS",
+        name: "React",
       },
       {
-        id: "f-4",
-        icon: SiTsnode,
-        name: "Typescript/Node js",
+        id: "fe-2",
+        icon: SiNextdotjs,
+        name: "Next.js",
       },
       {
-        id: "f-5",
+        id: "fe-3",
         icon: SiTailwindcss,
         name: "Tailwind CSS",
       },
       {
-        id: "f-6",
+        id: "fe-4",
         icon: SiJquery,
         name: "jQuery",
       },
       {
-        id: "f-8",
-        icon: SiLaravel,
-        name: "LARAVEL",
-      },
-      {
-        id: "f-7",
-        icon: SiApachekafka,
-        name: "Kafka Js",
+        id: "fe-5",
+        icon: SiJavascript,
+        name: "JavaScript",
       },
     ],
   },
   {
-    title: "Tools",
+    title: "Backend",
     items: [
       {
-        id: "t-8",
+        id: "be-1",
+        icon: SiNodedotjs,
+        name: "Node.js",
+      },
+      {
+        id: "be-2",
+        icon: SiLaravel,
+        name: "Laravel",
+      },
+      {
+        id: "be-3",
+        icon: SiPython,
+        name: "Python",
+      },
+      {
+        id: "be-5",
+        icon: FaGolang,
+        name: "Go",
+      },
+    ],
+  },
+  {
+    title: "Databases",
+    items: [
+      {
+        id: "db-1",
+        icon: SiMysql,
+        name: "MySQL",
+      },
+      {
+        id: "db-2",
+        icon: SiPostgresql,
+        name: "PostgreSQL",
+      },
+      {
+        id: "db-3",
+        icon: SiMongodb,
+        name: "MongoDB",
+      },
+      {
+        id: "db-4",
+        icon: SiAmazondynamodb,
+        name: "DynamoDB",
+      },
+      {
+        id: "db-5",
+        icon: SiElasticsearch,
+        name: "Elasticsearch",
+      },
+      {
+        id: "db-6",
+        icon: SiSupabase,
+        name: "Supabase",
+      },
+      {
+        id: "db-7",
+        icon: SiRedis,
+        name: "Redis",
+      },
+    ],
+  },
+  {
+    title: "Tools & Platforms",
+    items: [
+      {
+        id: "t-1",
         icon: SiDocker,
         name: "Docker",
       },
       {
         id: "t-2",
-        icon: SiMysql,
-        name: "MySQL",
+        icon: SiElasticsearch,
+        name: "Elasticsearch",
       },
       {
         id: "t-3",
-        icon: SiPostman,
-        name: "Postman",
-      },
-      {
-        id: "t-4",
-        icon: SiVisualstudiocode,
-        name: "VS Code",
-      },
-      {
-        id: "t-5",
         icon: SiGit,
         name: "Git",
       },
       {
-        id: "t-6",
+        id: "t-4",
         icon: AiFillGithub,
         name: "GitHub",
       },
       {
-        id: "t-7",
+        id: "t-5",
         icon: AiOutlineGitlab,
-        name: "Gitlab",
+        name: "GitLab",
       },
       {
-        id: "t-9",
-        icon: SiVite,
-        name: "ViteJS",
+        id: "t-6",
+        icon: SiPostman,
+        name: "Postman",
+      },
+      {
+        id: "t-7",
+        icon: SiVisualstudiocode,
+        name: "VS Code",
       },
       {
         id: "t-8",
-        icon: SiApachekafka,
-        name: "Apache Kafka",
+        icon: SiVite,
+        name: "Vite",
       },
     ],
   },
@@ -261,22 +305,63 @@ export const skills = [
 
 export const experiences = [
   {
+    organisation: "dMACQ Software Private Ltd",
+    logo: dmacq,
+    link: "https://dmacq.com/",
+    positions: [
+      {
+        title: "Software Engineer",
+        duration: "Feb 2025 - Present",
+        metrics: {
+          codeQuality: 87,
+          systemDesign: 80,
+          teamCollaboration: 90,
+        },
+        content: [
+          {
+            text: "Working on healthcare projects including LinkedCare with ABHA integration, ABHA health card with ABHA, and other healthcare management systems.",
+          },
+          {
+            text: "Developed and maintained scalable healthcare applications with focus on patient data management and health record systems.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     organisation: "Sigmoid Frog's",
     logo: sigmoid,
     link: "https://www.sigmoidfrogs.com/",
     positions: [
       {
-        title: "Software Development Engineer",
-        duration: "Present",
+        title: "Software Devloper L2",
+        duration: "Jan 2024 - Feb 2025",
+        metrics: {
+          codeQuality: 87,
+          systemDesign: 70,
+          teamCollaboration: 90,
+
+        },
         content: [
           {
-            text: "I am a Software Development Engineer specializing in AI and ML, with a focus on NLP and large language models like NLLB (No Language Left Behind), I am passionate about working with the latest technologies, from developing cutting-edge models to deploying them on scalable cloud platforms. I stay on the forefront of AI research to deliver innovative solutions that break down language barriers and enhance global communication.",
+            text: "Specialized in AI and ML development, with extensive work on NLP and large language models including NLLB (No Language Left Behind) and NLB (No Language Barrier). Developed and deployed cutting-edge AI models on scalable cloud platforms, focusing on breaking down language barriers and enhancing global communication.",
+          },
+          {
+            text: "Worked on healthcare projects including LinkedCare with ABHA and ABHA health card with ABHA integration.",
+          },
+          {
+            text: "Implemented AI-powered solutions using NLLB and NLB models for multilingual support and natural language processing capabilities.",
           },
         ],
       },
       {
         title: "Full Stack Developer",
         duration: "Jan 2024 - June 2023",
+        metrics: {
+          codeQuality: 87,
+          systemDesign: 70,
+          teamCollaboration: 90,
+        },
         content: [
           {
             text: "Dedicated to writing clean, robust, and maintainable code, I adhere to SOLID principles in every project. With expertise across the full stack, I ensure scalable and efficient solutions that stand the test of time.",
@@ -297,7 +382,12 @@ export const experiences = [
     positions: [
       {
         title: "Full Stack Developer",
-        duration: "May 2022 - Dec 2023",
+        duration: "June 2022 - Dec 2024",
+        metrics: {
+          codeQuality: 67,
+          systemDesign: 60,
+          teamCollaboration: 80,
+        },
         content: [
           {
             text: "I specialize in building and maintaining web applications using React and Node.js. With a strong focus on both front-end and back-end development, I create responsive and efficient applications that deliver seamless user experiences.",
@@ -312,6 +402,11 @@ export const experiences = [
       {
         title: "Web Developer",
         duration: "June 2022 - May 2023",
+        metrics: {
+          codeQuality: 67,
+          systemDesign: 60,
+          teamCollaboration: 80,
+        },
         content: [
           {
             text: "I specialize in building robust and scalable web applications using PHP and the Laravel framework. With a strong focus on back-end development, I create efficient and secure applications that deliver exceptional performance",
@@ -526,12 +621,12 @@ export const openSourceContributions = [
 export const projects = [
   {
     id: "project-1",
-    title: "Comicify.ai",
-    github: "https://github.com/ayush4345/Comicify.ai",
-    link: "https://comicify-ai.vercel.app/",
-    image: comicify_ai,
+    title: "LinkedCare with ABHA",
+    github: "",
+    link: "https://www.linkedcare.com/",
+    image: linkedcare,
     content:
-      "Convert any academic/news/boring text into cool comic strips using GPT-3.5 and Stable Diffusion!",
+      "Healthcare management system integrated with ABHA (Ayushman Bharat Health Account) for seamless health record management and patient data access.",
     stack: [
       {
         id: "icon-1",
@@ -540,330 +635,218 @@ export const projects = [
       },
       {
         id: "icon-2",
+        icon: SiNodedotjs,
+        name: "Node.js",
+      },
+      {
+        id: "icon-3",
         icon: SiTailwindcss,
         name: "TailwindCSS",
       },
       {
+        id: "icon-4",
+        icon: SiPostgresql,
+        name: "PostgreSQL",
+      },
+      {
+        id: "icon-5",
+        icon: SiRedis,
+        name: "Redis",
+      }
+    ],
+  },
+  {
+    id: "ABHA Health Card with ABHA",
+    title: "ABHA Health Card for Health Record Management",
+    github: "",
+    link: "https://www.abhahealthcard.com/",
+    image: abhahealthcard,
+    content:
+      "Digital health card system with ABHA integration enabling patients to access and manage their health records securely through a unified platform.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiReact,
+        name: "React",
+      },
+      {
+        id: "icon-2",
+        icon: SiNodedotjs,
+        name: "Node.js",
+      },
+      {
         id: "icon-3",
+        icon: SiTailwindcss,
+        name: "TailwindCSS",
+      },
+      {
+        id: "icon-4",
+        icon: SiPostgresql  ,
+        name: "PostgreSQL",
+      },
+      {
+        id: "icon-5",
+        icon: SiRedis,
+        name: "Redis",
+      },
+    ],
+  },
+  {
+    id: "BluPack",
+    title: "Get pre-sorted, packed medicines delivered to your doorstep",
+    github: "",
+    link: "https://blupack.com/",
+    image: blupack,
+    content:
+      "Get pre-sorted, packed medicines delivered to your doorstep. A comprehensive medication management platform with automated sorting and delivery system.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiReact,
+        name: "React",
+      },
+      {
+        id: "icon-2",
+        icon: SiNodedotjs,
+        name: "Node.js",
+      },
+      {
+        id: "icon-3",
+        icon: SiTailwindcss,
+        name: "TailwindCSS",
+      },
+      {
+        id: "icon-4",
+        icon: SiPostgresql,
+        name: "PostgreSQL",
+      },
+      {
+        id: "icon-5",
+        icon: SiRedis,
+        name: "Redis",
+      },
+    ],
+  },
+  {
+    id: "VALL NGO Project",
+    title: "VALL NGO Project",
+    github: "",
+    link: "https://vallindia.com/",
+    image: vallngoproject,
+    content:
+      "Comprehensive NGO management system for VALL organization, facilitating operations, donor management, and program tracking.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiReact,
+        name: "React",
+      },
+      {
+        id: "icon-2",
+        icon: SiNodedotjs,
+        name: "Node.js",
+      },
+      {
+        id: "icon-3",
+        icon: SiTailwindcss,
+        name: "TailwindCSS",
+      },
+      {
+        id: "icon-4",
+        icon: SiAmazondynamodb,
+        name: "DynamoDB",
+      },
+      {
+        id: "icon-5",
+        icon: SiRedis,
+        name: "Redis",
+      },
+    ],
+  },
+  {
+    id: "Document Management System with AI and OCR",
+    title: "Document Management System with AI and OCR",
+    github: "",
+    link: "https://dmacq.com/dms+",
+    image: documentmanagement,
+    content:
+      "Advanced document management system powered by AI, OCR technology, and Elasticsearch for intelligent document processing, search, and retrieval.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiReact,
+        name: "React",
+      },
+      {
+        id: "icon-2",
+        icon: SiNodedotjs,
+        name: "Node.js",
+      },
+      {
+        id: "icon-3",
+        icon: SiPython,
+        name: "Python",
+      },
+      {
+        id: "icon-4",
+        icon: SiElasticsearch,
+        name: "Elasticsearch",
+      },
+      {
+        id: "icon-5",
         icon: SiOpenai,
         name: "OpenAI",
       },
       {
-        id: "icon-4",
-        icon: SiGooglecloud,
-        name: "Google Cloud Platform",
-      },
-      {
-        id: "icon-5",
-        icon: SiFlask,
-        name: "Flask",
-      },
-    ],
-  },
-  {
-    id: "project-2",
-    title: "GreenTrust",
-    github: "https://github.com/mittal-parth/GreenTrust",
-    link: "https://green-trust-fantom.netlify.app/",
-    image: greentrust,
-    content:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiReact,
-        name: "React",
-      },
-      {
-        id: "icon-2",
-        icon: SiTailwindcss,
-        name: "TailwindCSS",
-      },
-      {
-        id: "icon-3",
-        icon: SiNextdotjs,
-        name: "Next.js",
-      },
-      {
-        id: "icon-4",
-        icon: SiIpfs,
-        name: "IPFS",
-      },
-      {
-        id: "icon-5",
-        icon: SiSolidity,
-        name: "Solidity",
-      },
-      {
         id: "icon-6",
-        icon: IoIosNotificationsOutline,
-        name: "Push Protocol",
-      },
-    ],
-  },
-  {
-    id: "project-3",
-    title: "ChargeSwap",
-    github: "https://github.com/CommanderAstern/ChargeSwap",
-    link: "https://devfolio.co/projects/chargeswap-3527",
-    image: chargeswap,
-    content:
-      "A Blockchain-based EV-Battery swapping solution - winning project at ETHIndia'22, the world's largest Ethereum Hackathon",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiReact,
-        name: "React",
-      },
-      {
-        id: "icon-3",
-        icon: SiWeb3Dotjs,
-        name: "Web3.js",
-      },
-      {
-        id: "icon-4",
-        icon: SiSolidity,
-        name: "Solidity",
-      },
-      {
-        id: "icon-5",
-        icon: FaHardHat,
-        name: "HardHat",
-      },
-      {
-        id: "icon-6",
-        icon: SiIpfs,
-        name: "IPFS",
-      },
-      {
-        id: "icon-7",
-        icon: SiArduino,
-        name: "Arduino",
+        icon: SiMysql,
+        name: "MySQL",
       },
       {
         id: "icon-8",
-        icon: IoIosNotificationsOutline,
-        name: "Push Protocol",
-      },
-    ],
-  },
-  {
-    id: "project-4",
-    title: "Samsotech Table Management System",
-    github: "",
-    link: "https://www.linkedin.com/posts/mittal-parth_technologysolutions-softwaredevelopment-technology-activity-6994915645066809344-WnMY?utm_source=share&utm_medium=member_desktop",
-    image: placeicon,
-    content:
-      "Restaurant, Place, Table and realtime Reservation Management with Multi-Tenant Architecture, RBAC, SMS and Email integration for Samsotech International",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiDotnet,
-        name: "Dot Net Core MVC 6",
+        icon: SiLaravel,
+        name: "Laravel",
       },
       {
-        id: "icon-2",
-        icon: SiBootstrap,
-        name: "Bootstrap",
-      },
-      {
-        id: "icon-3",
-        icon: DiMsqlServer,
-        name: "MS Sql Server",
-      },
-      {
-        id: "icon-4",
-        icon: SiJquery,
-        name: "jQuery",
-      },
-      {
-        id: "icon-5",
-        icon: SiTwilio,
-        name: "Twillio",
-      },
-    ],
-  },
-  {
-    id: "project-5",
-    title: "Non-Teaching Recruitment Portal, NITK",
-    github: "",
-    link: "http://recruitment.nitk.ac.in/",
-    image: recruitment,
-    content:
-      "The official recruitment portal for non-teaching staff with an admin panel, email notifications and payment integration.",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiRubyonrails,
-        name: "Ruby on Rails",
-      },
-      {
-        id: "icon-2",
-        icon: SiTailwindcss,
-        name: "TailwindCSS",
-      },
-      {
-        id: "icon-3",
-        icon: SiJquery,
-        name: "jQuery",
+        id: "icon-7",
+        icon: SiRedis,
+        name: "Redis",
       },
     ],
   },
   {
     id: "project-6",
-    title: "Career Development Centre, NITK Website",
+    title: "Simandhar Education Web Application",
     github: "",
-    link: "http://cdc.nitk.ac.in/",
-    image: cdc,
-    content: "The official website of CDC, NITK with a custom built CMS.",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiRubyonrails,
-        name: "Ruby on Rails",
-      },
-      {
-        id: "icon-2",
-        icon: SiBootstrap,
-        name: "Bootstrap",
-      },
-      {
-        id: "icon-3",
-        icon: SiJavascript,
-        name: "JavaScript",
-      },
-    ],
-  },
-  {
-    id: "project-7",
-    title: "Huntly",
-    github: "",
-    link: "https://devfolio.co/projects/huntly-b5a9",
-    image: huntly,
-    content:
-      "A cross-platform mobile application that brings people closer to the physical environment and forms meaningful connections by organising real-world Treasure Hunts for free and winning rewards. The app uses machine learning to match users and form teams of like-minded people.",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiDjango,
-        name: "Django Rest Framework",
-      },
-      {
-        id: "icon-2",
-        icon: SiFlutter,
-        name: "Flutter",
-      },
-      {
-        id: "icon-3",
-        icon: SiReplit,
-        name: "Replit",
-      },
-      {
-        id: "icon-4",
-        icon: SiFlask,
-        name: "Flask",
-      },
-      {
-        id: "icon-5",
-        icon: SiFigma,
-        name: "Figma",
-      },
-      {
-        id: "icon-6",
-        icon: SiGooglemaps,
-        name: "Google Maps API",
-      },
-    ],
-  },
-  {
-    id: "project-8",
-    title: "Cluboard",
-    github: "https://github.com/mittal-parth/Cluboard",
     link: "",
-    image: cluboard,
+    image: simandhar,
     content:
-      "A full-stack web application to facilitate sharing resources in college clubs with email notifications, requests and ticketing system, and analytical dashboards.",
+      "Comprehensive education web application built with MongoDB and Node.js, providing a robust platform for educational content management, student enrollment, and course administration.",
     stack: [
       {
         id: "icon-1",
-        icon: SiDjango,
-        name: "Django",
+        icon: SiReact,
+        name: "React",
       },
       {
         id: "icon-2",
-        icon: AiFillHtml5,
-        name: "HTML",
+        icon: SiNodedotjs,
+        name: "Node.js",
       },
       {
         id: "icon-3",
-        icon: DiCss3,
-        name: "CSS",
+        icon: SiMongodb,
+        name: "MongoDB",
       },
       {
         id: "icon-4",
-        icon: SiJavascript,
-        name: "JavaScript",
+        icon: SiTailwindcss,
+        name: "TailwindCSS",
       },
       {
         id: "icon-5",
-        icon: SiBootstrap,
-        name: "Bootstrap",
-      },
-      {
-        id: "icon-6",
-        icon: SiChartdotjs,
-        name: "Chart.js",
-      },
-    ],
-  },
-  {
-    id: "project-9",
-    title: "Cash Flow Minimiser",
-    github: "https://github.com/mittal-parth/Cash-Flow-Minmiser",
-    link: "https://minimise-cash-flow.netlify.app/",
-    image: cash_flow,
-    content:
-      "A React application to help users visualise and minimise cash flow among multiple transactions.",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiReact,
-        name: "React",
-      },
-      {
-        id: "icon-2",
-        icon: AiFillHtml5,
-        name: "HTML",
-      },
-      {
-        id: "icon-3",
-        icon: DiCss3,
-        name: "CSS",
-      },
-    ],
-  },
-  {
-    id: "project-10",
-    title: "Portfolio",
-    github: "https://github.com/mittal-parth/personal-portfolio",
-    link: "https://parthmittal.netlify.app/",
-    image: portfolio,
-    content: "Personal portfolio website with React and Tailwind CSS.",
-    stack: [
-      {
-        id: "icon-1",
-        icon: SiReact,
-        name: "React",
-      },
-      {
-        id: "icon-2",
-        icon: SiTailwindcss,
-        name: "Tailwind CSS",
-      },
-      {
-        id: "icon-3",
-        icon: AiFillHtml5,
-        name: "HTML",
+        icon: SiRedis,
+        name: "Redis",
       },
     ],
   },

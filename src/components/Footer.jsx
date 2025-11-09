@@ -1,68 +1,45 @@
 import React from "react";
-import Button from "./Button";
+import { motion } from "framer-motion";
 import { socialMedia, aboutMe } from "../constants";
-import { abhishekImage } from "../assets";
-import { layout } from "../style";
-import { resumeLink, repoLink } from "../constants";
-import { AiFillGithub } from "react-icons/ai";
+import { playHoverSound, playClickSound } from "../utils/sounds";
 
-const Footer = () => (
-  <footer id="contactMe" className="bg-gray-900 sm:px-16 px-6">
-    <div
-      className={`${layout.sectionReverse} xl:max-w-[1280px] w-full mx-auto gap-y-4 `}
-    >
-      <div className={` ${layout.sectionInfo}`}>
-        <h2 className="text-xl font-bold text-gray-800 font-poppins dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-          {aboutMe.name}
-        </h2>
-        <p
-          className={`font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-5`}
-        >
-        {aboutMe.tagLine}
-        </p>
-        <div className="flex flex-row mt-4">
-          {socialMedia.map((social, index) => (
-            <a
-              href={social.link}
-              target="_blank"
-              key={social.id}
-              index={index}
-              className="text-white mr-5 text-[25px] hover:text-teal-200"
-            >
-              {React.createElement(social.icon)}
-            </a>
-          ))}
-        </div>
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
 
-        <div className="grid grid-cols-2">
-          {/* styles is a prop */}
-          <a href={resumeLink} target="_blank">
-            <Button styles="mt-10 mr-3" text="Resume" icon="AiFillGithub" />
-          </a>
-          <a href={repoLink} target="_blank">
-            <Button
-              styles="mt-10 inline-flex items-center justify-center"
-              text="Star"
-              icon={AiFillGithub}
-            />
-          </a>
+  return (
+    <footer className="py-8 px-6 sm:px-16 border-t border-secondary-light/20 dark:border-secondary-dark/30">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="text-center sm:text-left">
+            <h3 className="font-poppins font-bold text-lg text-textPrimary-light dark:text-textPrimary-dark">
+              {aboutMe.name}
+            </h3>
+            <p className="font-poppins font-normal text-sm text-textSecondary-light dark:text-textSecondary-dark">
+              © {currentYear}
+            </p>
+          </div>
+
+          <div className="flex gap-4">
+            {socialMedia.map((social, index) => (
+              <motion.a
+                key={social.id}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-10 h-10 rounded-full bg-secondary-light/10 dark:bg-secondary-dark/10 flex items-center justify-center text-secondary-light dark:text-secondary-dark hover:bg-secondary-light dark:hover:bg-secondary-dark hover:text-white dark:hover:text-primary-dark transition-all duration-300"
+                onMouseEnter={playHoverSound}
+                onClick={playClickSound}
+              >
+                {React.createElement(social.icon, { size: 20 })}
+              </motion.a>
+            ))}
+          </div>
         </div>
       </div>
-
-      <div className="md:ml-auto mt-10 md:mt-0">
-        <img
-          src={abhishekImage}
-          alt="Abhishek Tripathi"
-          className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full"
-        />
-      </div>
-    </div>
-    <div className="text-center font-poppins font-normal text-dimWhite text-xs sm:text-sm pb-4">
-      <p>
-        Abhishek Tripathi
-      </p>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 export default Footer;
