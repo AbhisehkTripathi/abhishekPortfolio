@@ -64,7 +64,7 @@ const Hero = () => {
               animate={{ opacity: [1, 0, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
             >
-              |
+              ▋
             </motion.span>
           </motion.h2>
           

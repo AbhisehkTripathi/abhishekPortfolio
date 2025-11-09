@@ -818,7 +818,7 @@ export const projects = [
     id: "project-6",
     title: "Simandhar Education Web Application",
     github: "",
-    link: "",
+    link: "https://www.simandhareducation.com/",
     image: simandhar,
     content:
       "Comprehensive education web application built with MongoDB and Node.js, providing a robust platform for educational content management, student enrollment, and course administration.",
