@@ -1,79 +1,54 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTheme } from "./contexts/ThemeContext";
 
-import styles from "./style";
 import {
   Navbar,
   Hero,
-  Education,
-  SkillsAndExperience,
-  ExtraCurricular,
-  Footer,
-  OpenSource,
+  AboutMe,
+  TechStack,
   Projects,
-  BlogPosts,
-  Loading,
-  Achievements,
+  Experience,
+  Footer,
 } from "./components";
 
 const App = () => {
-  const [isLoading,setIsLoading] = React.useState(true);
+  const { theme } = useTheme();
 
-  React.useEffect(()=>{
-    setTimeout(()=>{setIsLoading(false)},1600);
-  },[])
-
-  if(isLoading){
-    return (
-      <div className="bg-primary w-full overflow-hidden">
-        <Loading/>
-      </div>
-    )
-  }else{
-    return (
-      // A div to wrap the entire application
-    <div className="bg-primary w-full overflow-hidden">
-      <motion.section
-        initial={{ x: -100, opacity: 0.25 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
+  return (
+    <div className="w-full overflow-hidden transition-colors duration-300 min-h-screen">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
       >
-        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-          <div className={`${styles.boxWidth}`}>
+        {/* Navbar */}
+        <div className="px-4 sm:px-8 lg:px-16 py-4">
+          <div className="max-w-7xl mx-auto">
             <Navbar />
           </div>
         </div>
 
-        <div className={`bg-primary ${styles.flexStart}`}>
-          <div className={`${styles.boxWidth}`}>
-            <Hero />
-          </div>
-        </div>
+        {/* Hero Section */}
+        <Hero />
 
-        <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
-          <div className={`${styles.boxWidth}`}>
-            <SkillsAndExperience />
-            <Education />
-          </div>
-        </div>
-        <Achievements />
-        {/*
-        <div className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}>
-          <div className={`${styles.boxWidth}`}>
-            
-              <Projects />
-            <BlogPosts enabled={false} />
-            <OpenSource />
-            <ExtraCurricular />
-          </div> 
-        </div>
-        */}
+        {/* About Me Section */}
+        <AboutMe />
+
+        {/* Tech Stack Section */}
+        <TechStack />
+
+        {/* Projects Section */}
+        <Projects />
+
+        {/* Experience Section */}
+        <Experience />
+
+        {/* Footer */}
         <Footer />
-      </motion.section>
+      </motion.div>
     </div>
-
-    );
-  }
+  );
 };
 
 export default App;
