@@ -66,7 +66,6 @@ import {
   SiCplusplus,
   SiC,
   SiRubyonrails,
-  SiJquery,
   SiVisualstudiocode,
   SiPostman,
   SiGit,
@@ -97,6 +96,10 @@ import {
   SiAmazondynamodb,
   SiSupabase,
   SiRedis,
+  SiGithubactions,
+  SiPlaywright,
+  SiLinear,
+  SiAmazonaws,
 } from "react-icons/si";
 
 import { FaHardHat } from "react-icons/fa";
@@ -107,7 +110,7 @@ import { FaGolang } from "react-icons/fa6";
 
 import { DiCss3, DiJava, DiMsqlServer, DiRuby } from "react-icons/di";
 
-export const resumeLink = "https://drive.google.com/file/d/1leqfOf-_ENjydFHzL-AfFIclU58ftspT/view";
+export const resumeLink = "https://drive.google.com/file/d/1KjSJx9n-X62JKCeX4tT5H_2mZ6bjBruh/view";
 export const repoLink = "https://github.com/AbhisehkTripathi";
 
 export const callToAction =
@@ -180,11 +183,6 @@ export const skills = [
         name: "Tailwind CSS",
       },
       {
-        id: "fe-4",
-        icon: SiJquery,
-        name: "jQuery",
-      },
-      {
         id: "fe-5",
         icon: SiJavascript,
         name: "JavaScript",
@@ -254,6 +252,11 @@ export const skills = [
         icon: SiRedis,
         name: "Redis",
       },
+      {
+        id: "db-8",
+        icon: SiMicrosoftazure,
+        name: "Cosmos DB",
+      },
     ],
   },
   {
@@ -299,6 +302,46 @@ export const skills = [
         icon: SiVite,
         name: "Vite",
       },
+      {
+        id: "t-9",
+        icon: SiPlaywright,
+        name: "Playwright",
+      },
+      {
+        id: "t-10",
+        icon: SiGithubactions,
+        name: "GitHub Actions",
+      },
+      {
+        id: "t-11",
+        icon: SiLinear,
+        name: "Linear",
+      },
+      {
+        id: "t-12",
+        icon: SiOpenai,
+        name: "Cursor AI",
+      },
+    ],
+  },
+  {
+    title: "Cloud & Platforms",
+    items: [
+      {
+        id: "cloud-1",
+        icon: SiMicrosoftazure,
+        name: "Azure",
+      },
+      {
+        id: "cloud-2",
+        icon: SiAmazonaws,
+        name: "AWS",
+      },
+      {
+        id: "cloud-3",
+        icon: SiGooglecloud,
+        name: "Google Cloud",
+      },
     ],
   },
 ];
@@ -312,18 +355,13 @@ export const experiences = [
       {
         title: "Software Engineer",
         duration: "Feb 2025 - Present",
-        metrics: {
-          codeQuality: 87,
-          systemDesign: 80,
-          teamCollaboration: 90,
-        },
         content: [
           {
-            text: "Working on healthcare projects including LinkedCare with ABHA integration, ABHA health card with ABHA, and other healthcare management systems.",
+            text: "Working on DMS+ (Document Management System with AI and OCR)—intelligent document processing, search, and retrieval powered by Elasticsearch and OpenAI.",
           },
           {
-            text: "Developed and maintained scalable healthcare applications with focus on patient data management and health record systems.",
-          },
+            text: "Dentsu FormPlus / Forms+: form creation for multiple types of onboarding and workflows.",
+          }
         ],
       },
     ],
@@ -334,14 +372,8 @@ export const experiences = [
     link: "https://www.sigmoidfrogs.com/",
     positions: [
       {
-        title: "Software Devloper L2",
+        title: "Software Developer L2",
         duration: "Jan 2024 - Feb 2025",
-        metrics: {
-          codeQuality: 87,
-          systemDesign: 70,
-          teamCollaboration: 90,
-
-        },
         content: [
           {
             text: "Specialized in AI and ML development, with extensive work on NLP and large language models including NLLB (No Language Left Behind) and NLB (No Language Barrier). Developed and deployed cutting-edge AI models on scalable cloud platforms, focusing on breaking down language barriers and enhancing global communication.",
@@ -356,19 +388,10 @@ export const experiences = [
       },
       {
         title: "Full Stack Developer",
-        duration: "Jan 2024 - June 2023",
-        metrics: {
-          codeQuality: 87,
-          systemDesign: 70,
-          teamCollaboration: 90,
-        },
+        duration: "June 2023 - Jan 2024",
         content: [
           {
-            text: "Dedicated to writing clean, robust, and maintainable code, I adhere to SOLID principles in every project. With expertise across the full stack, I ensure scalable and efficient solutions that stand the test of time.",
-            link: "",
-          },
-          {
-            text: "Wrote APIs in [ Javascript ,PHP ,Python ,Rust] to help gracefully migrate a running infrastructure",
+            text: "Dedicated to writing clean, robust, and maintainable code, adhering to SOLID principles. Wrote APIs in JavaScript, PHP, Python, and Rust to help gracefully migrate running infrastructure.",
             link: "",
           },
         ],
@@ -383,11 +406,6 @@ export const experiences = [
       {
         title: "Full Stack Developer",
         duration: "June 2022 - Dec 2024",
-        metrics: {
-          codeQuality: 67,
-          systemDesign: 60,
-          teamCollaboration: 80,
-        },
         content: [
           {
             text: "I specialize in building and maintaining web applications using React and Node.js. With a strong focus on both front-end and back-end development, I create responsive and efficient applications that deliver seamless user experiences.",
@@ -402,11 +420,6 @@ export const experiences = [
       {
         title: "Web Developer",
         duration: "June 2022 - May 2023",
-        metrics: {
-          codeQuality: 67,
-          systemDesign: 60,
-          teamCollaboration: 80,
-        },
         content: [
           {
             text: "I specialize in building robust and scalable web applications using PHP and the Laravel framework. With a strong focus on back-end development, I create efficient and secure applications that deliver exceptional performance",
@@ -1036,7 +1049,8 @@ export const socialMedia = [
 export const aboutMe = {
   name: "Abhishek Tripathi",
   tagLine:
-    "Software Development Engineer | Web Developer | Machine Learning Enthusiast",
+    "Full Stack Software Engineer — Associate Solution Architect",
   intro:
-    "Experienced in building scalable web and mobile applications using modern frameworks like React, Node.js, and Python. Passionate about clean code, continuous learning, and delivering solutions that drive business success..",
+    "4+ years building AI-powered applications and solution architecture. I design and deliver scalable systems with strong AI usage—from intelligent document processing and NLP to cloud-native APIs and modern web experiences.",
+  experienceYears: "4+",
 };
