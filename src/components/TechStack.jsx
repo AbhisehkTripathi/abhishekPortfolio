@@ -1,9 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { skills } from "../constants";
-import { playHoverSound } from "../utils/sounds";
-
-// Enhanced color mapping for different tech icons with brand colors
+// Brand colors for tech icons (data-driven; exception to color-token rule) for different tech icons with brand colors
 const getTechColor = (name) => {
   const colorMap = {
     'JavaScript': '#F7DF1E',
@@ -33,14 +31,22 @@ const getTechColor = (name) => {
     'Vite': '#646CFF',
     'Next.js': '#000000',
     'Elasticsearch': '#005571',
+    'Playwright': '#2EAD33',
+    'GitHub Actions': '#2088FF',
+    'Linear': '#5E6AD2',
+    'Azure': '#0078D4',
+    'AWS': '#FF9900',
+    'Google Cloud': '#4285F4',
+    'Cosmos DB': '#0078D4',
+    'Cursor AI': '#000000',
   };
-  
-  return colorMap[name] || '#a8e6cf';
+
+  return colorMap[name] || '#94B4C1';
 };
 
 const TechStack = () => {
   return (
-    <section id="techstack" className="py-16 px-6 sm:px-16 relative overflow-hidden">
+    <section id="techstack" className="py-16 px-4 sm:px-6 md:px-16 relative overflow-hidden">
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -49,63 +55,62 @@ const TechStack = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-textPrimary-light dark:text-textPrimary-dark mb-4">
+          <h2 className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl text-textPrimary-light mb-4">
             Tech <span className="text-gradient">Stack</span>
           </h2>
-          <div className="w-24 h-1 bg-secondary-light dark:bg-secondary-dark mx-auto rounded-full"></div>
+          <p className="font-poppins font-normal text-base sm:text-lg text-textSecondary-light mt-2">
+            Full Stack Software Engineer — Associate Solution Architect
+          </p>
+          <div className="w-24 h-1 bg-secondary mx-auto rounded-full mt-4" />
         </motion.div>
 
-        <div className="space-y-12">
+        <div className="space-y-10 sm:space-y-12">
           {skills.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+              transition={{ duration: 0.5, delay: categoryIndex * 0.08 }}
             >
-              <h3 className="font-poppins font-semibold text-xl text-textPrimary-light dark:text-textPrimary-dark mb-6 text-center">
+              <h3 className="font-poppins font-semibold text-lg sm:text-xl text-textPrimary-light mb-4 sm:mb-6 text-center">
                 {category.title}
               </h3>
-              <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-4 justify-items-center">
+              <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-3 sm:gap-4 justify-items-center">
                 {category.items.map((item, index) => {
                   const techColor = getTechColor(item.name);
                   return (
                     <motion.div
                       key={item.id}
-                      initial={{ opacity: 0, scale: 0.8 }}
+                      initial={{ opacity: 0, scale: 0.85 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
-                      whileHover={{ scale: 1.15, y: -5 }}
+                      transition={{ duration: 0.35, delay: index * 0.03 }}
+                      whileHover={{ scale: 1.12, y: -6 }}
                       className="relative group"
-                      onMouseEnter={playHoverSound}
                     >
                       <div className="relative tooltip">
                         <motion.div
-                          className="text-4xl sm:text-5xl transition-all duration-300 cursor-pointer relative"
+                          className="text-3xl sm:text-4xl md:text-5xl transition-all duration-300 cursor-pointer relative"
                           style={{
-                            color: '#636e72',
-                            filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
+                            color: '#5c6468',
+                            filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.08))',
                           }}
                           whileHover={{
                             color: techColor,
-                            scale: 1.1,
-                            filter: `drop-shadow(0 0 15px ${techColor}) drop-shadow(0 0 30px ${techColor}60)`,
+                            scale: 1.08,
+                            filter: `drop-shadow(0 0 12px ${techColor}99) drop-shadow(0 0 24px ${techColor}50)`,
                           }}
-                          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                          transition={{ type: "spring", stiffness: 320, damping: 22 }}
                         >
                           {item.icon && React.createElement(item.icon)}
-                          {/* Glow effect on hover */}
                           <motion.div
-                            className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-25 blur-xl -z-10"
+                            className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 blur-xl -z-10"
                             style={{ backgroundColor: techColor }}
-                            whileHover={{ opacity: 0.3 }}
+                            whileHover={{ opacity: 0.25 }}
                           />
                         </motion.div>
-                        <span className="tooltiptext">
-                          {item.name}
-                        </span>
+                        <span className="tooltiptext">{item.name}</span>
                       </div>
                     </motion.div>
                   );

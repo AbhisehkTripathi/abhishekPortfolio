@@ -60,6 +60,7 @@ import manipal from "./manipal.png";
 import icon from "./icon.jpg";
 import ethforall from "./ethforall.png";
 import simandhar from "./Simandhar-Logo.png";
+import techIllustration from "./tech-illustration.png";
 
 export {
   quotes,
@@ -123,5 +124,6 @@ export {
   ethforall,
   mumbaiUni,
   abhishekImage,
-  simandhar
+  simandhar,
+  techIllustration
 };

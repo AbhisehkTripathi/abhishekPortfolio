@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useTheme } from "./contexts/ThemeContext";
 
 import {
   Navbar,
@@ -13,8 +12,6 @@ import {
 } from "./components";
 
 const App = () => {
-  const { theme } = useTheme();
-
   return (
     <div className="w-full overflow-hidden transition-colors duration-300 min-h-screen">
       <motion.div
@@ -44,7 +41,7 @@ const App = () => {
         {/* Experience Section */}
         <Experience />
 
-        {/* Footer */}
+        {/* Footer (includes contact form) */}
         <Footer />
       </motion.div>
     </div>

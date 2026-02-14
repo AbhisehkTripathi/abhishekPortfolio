@@ -7,45 +7,38 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#fafafa",
-          light: "#fafafa",
-          dark: "#0a0e27",
+          DEFAULT: "#EAE0CF",
+          light: "#EAE0CF",
         },
         secondary: {
-          DEFAULT: "#a8e6cf",
-          light: "#a8e6cf",
-          dark: "#00d9a5",
+          DEFAULT: "#94B4C1",
+          light: "#94B4C1",
         },
         accent: {
-          DEFAULT: "#ffd3b6",
-          light: "#ffd3b6",
-          dark: "#ff6b9d",
+          DEFAULT: "#7a9ca8",
+          light: "#7a9ca8",
         },
         accent2: {
-          DEFAULT: "#ffaaa5",
-          light: "#ffaaa5",
-          dark: "#ff4757",
+          DEFAULT: "#6b8f9a",
+          light: "#6b8f9a",
         },
         accent3: {
-          DEFAULT: "#dcedc8",
-          light: "#dcedc8",
-          dark: "#2ed573",
+          DEFAULT: "#a8c4ce",
+          light: "#a8c4ce",
         },
         dimWhite: "rgba(0, 0, 0, 0.7)",
-        dimBlue: "rgba(168, 230, 207, 0.1)",
-        pastelBlue: "#b8e0d2",
-        pastelPink: "#f4c2c2",
-        pastelPurple: "#d4c5f9",
-        pastelYellow: "#ffeaa7",
+        dimBlue: "rgba(148, 180, 193, 0.15)",
+        pastelBlue: "#a8c4ce",
+        pastelPink: "#c9b8a8",
+        pastelPurple: "#b8a8c4",
+        pastelYellow: "#e8dcc8",
         textPrimary: {
           DEFAULT: "#2d3436",
           light: "#2d3436",
-          dark: "#f1f2f6",
         },
         textSecondary: {
-          DEFAULT: "#636e72",
-          light: "#636e72",
-          dark: "#a4b0be",
+          DEFAULT: "#5c6468",
+          light: "#5c6468",
         },
       },
       fontFamily: {
@@ -60,6 +53,11 @@ module.exports = {
         'slide-up': 'slideUp 0.6s ease-out',
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+        'sunburst': 'sunburst 4s ease-in-out infinite',
+        'sunburst-bright': 'sunburstBright 3s ease-in-out infinite',
+        'node-pulse': 'nodePulse 2s ease-in-out infinite',
+        'tree-flow': 'treeFlow 3s linear infinite',
+        'leaf-sway': 'leafSway 4s ease-in-out infinite',
       },
       keyframes: {
         float: {
@@ -75,8 +73,33 @@ module.exports = {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 5px rgba(168, 230, 207, 0.5)' },
-          '100%': { boxShadow: '0 0 20px rgba(168, 230, 207, 0.8), 0 0 30px rgba(168, 230, 207, 0.6)' },
+          '0%': { boxShadow: '0 0 5px rgba(148, 180, 193, 0.5)' },
+          '100%': { boxShadow: '0 0 20px rgba(148, 180, 193, 0.6), 0 0 30px rgba(148, 180, 193, 0.4)' },
+        },
+        sunburst: {
+          '0%, 100%': { opacity: '0.9', transform: 'scale(1)' },
+          '50%': { opacity: '1', transform: 'scale(1.08)' },
+        },
+        sunburstBright: {
+          '0%, 100%': { opacity: '0.95' },
+          '50%': { opacity: '1' },
+        },
+        nodePulse: {
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(34, 197, 94, 0.35)' },
+          '50%': { boxShadow: '0 0 0 10px rgba(34, 197, 94, 0)' },
+        },
+        treeFlow: {
+          '0%': { backgroundPosition: '0% 0%' },
+          '100%': { backgroundPosition: '0% 100%' },
+        },
+        leafSway: {
+          '0%, 100%': { transform: 'translateX(0) rotate(0deg)' },
+          '25%': { transform: 'translateX(3px) rotate(2deg)' },
+          '75%': { transform: 'translateX(-3px) rotate(-2deg)' },
+        },
+        lineDraw: {
+          '0%': { scaleY: '0', opacity: '0' },
+          '100%': { scaleY: '1', opacity: '1' },
         },
       },
     },
