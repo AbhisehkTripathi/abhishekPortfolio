@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { abhishek } from "../assets";
 
 const Loading = () => {
@@ -33,7 +33,7 @@ const Loading = () => {
           }}
         />
         <motion.p
-          className="font-poppins font-semibold text-textPrimary"
+          className="font-sora font-semibold text-white"
           animate={{ opacity: [0.5, 1, 0.5] }}
           transition={{
             duration: 1.5,

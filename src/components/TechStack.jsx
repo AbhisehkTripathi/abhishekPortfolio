@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { skills } from "../constants";
 // Brand colors for tech icons (data-driven; exception to color-token rule) for different tech icons with brand colors
 const getTechColor = (name) => {
@@ -41,27 +41,28 @@ const getTechColor = (name) => {
     'Cursor AI': '#000000',
   };
 
-  return colorMap[name] || '#94B4C1';
+  return colorMap[name] || '#71717A';
 };
 
 const TechStack = () => {
   return (
-    <section id="techstack" className="py-16 px-4 sm:px-6 md:px-16 relative overflow-hidden">
+    <section id="techstack" className="py-16 px-4 sm:px-6 md:px-16 relative overflow-hidden bg-primary">
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] blob-cyan rounded-full opacity-15" />
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-center mb-12"
         >
-          <h2 className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl text-textPrimary-light mb-4">
+          <h2 className="font-sora font-bold text-3xl sm:text-[36px] md:text-[42px] text-white mb-4">
             Tech <span className="text-gradient">Stack</span>
           </h2>
-          <p className="font-poppins font-normal text-base sm:text-lg text-textSecondary-light mt-2">
+          <p className="font-inter font-normal text-base sm:text-lg text-textSecondary mt-2">
             Full Stack Software Engineer — Associate Solution Architect
           </p>
-          <div className="w-24 h-1 bg-secondary mx-auto rounded-full mt-4" />
+          <div className="w-24 h-1 bg-accent-gradient mx-auto rounded-full mt-4" />
         </motion.div>
 
         <div className="space-y-10 sm:space-y-12">
@@ -73,7 +74,7 @@ const TechStack = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: categoryIndex * 0.08 }}
             >
-              <h3 className="font-poppins font-semibold text-lg sm:text-xl text-textPrimary-light mb-4 sm:mb-6 text-center">
+              <h3 className="font-space font-semibold text-lg sm:text-xl text-textSecondary mb-4 sm:mb-6 text-center">
                 {category.title}
               </h3>
               <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-3 sm:gap-4 justify-items-center">
@@ -93,8 +94,8 @@ const TechStack = () => {
                         <motion.div
                           className="text-3xl sm:text-4xl md:text-5xl transition-all duration-300 cursor-pointer relative"
                           style={{
-                            color: '#5c6468',
-                            filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.08))',
+                            color: '#71717A',
+                            filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))',
                           }}
                           whileHover={{
                             color: techColor,

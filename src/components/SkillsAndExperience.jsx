@@ -1,7 +1,7 @@
 import React from "react";
 import { experiences, skills } from "../constants";
 import { layout } from "../style";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export const SkillIcon = ({ icon, name }) => {
   return (

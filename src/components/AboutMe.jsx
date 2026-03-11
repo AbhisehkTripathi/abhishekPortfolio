@@ -1,6 +1,8 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { aboutMe } from "../constants";
 import { abhishekImage } from "../assets";
+import { fadeUp, slideLeft, slideRight } from "../animations/fadeUp";
+import { staggerContainer, staggerItem } from "../animations/stagger";
 
 const FLOATING_SKILLS = [
   { label: "System Design", delay: 0, floatDur: 3.2 },
@@ -17,51 +19,32 @@ const FLOATING_SKILLS = [
 
 const AboutMe = () => {
   return (
-    <section id="about" className="py-16 sm:py-20 px-4 sm:px-6 md:px-16 relative overflow-hidden min-h-[85vh] flex items-center">
-      {/* Sun burst backgrounds */}
-      <div
-        className="absolute inset-0 pointer-events-none animate-sunburst"
-        style={{
-          background: "radial-gradient(ellipse 120% 80% at 50% 15%, rgba(255, 255, 240, 0.98) 0%, rgba(255, 250, 205, 0.9) 20%, rgba(255, 248, 220, 0.75) 35%, rgba(254, 240, 138, 0.5) 50%, rgba(253, 224, 71, 0.25) 65%, transparent 80%)",
-          filter: "blur(1px)",
-        }}
-      />
-      <div
-        className="absolute inset-0 pointer-events-none animate-sunburst-bright"
-        style={{
-          background: "radial-gradient(circle at 50% 5%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 253, 231, 0.85) 25%, rgba(255, 248, 220, 0.6) 45%, rgba(254, 240, 138, 0.3) 60%, transparent 75%)",
-          filter: "blur(35px)",
-        }}
-      />
-      <div
-        className="absolute inset-0 pointer-events-none animate-sunburst"
-        style={{
-          background: "radial-gradient(circle at 45% 20%, rgba(255, 236, 179, 0.6) 0%, rgba(254, 240, 138, 0.35) 40%, transparent 70%)",
-          filter: "blur(50px)",
-        }}
-      />
+    <section id="about" className="py-16 sm:py-20 px-4 sm:px-6 md:px-16 relative overflow-hidden min-h-[85vh] flex items-center bg-primary-sec">
+      {/* Gradient blobs */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] blob-accent rounded-full opacity-20" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] blob-purple rounded-full opacity-15" />
 
       <div className="max-w-7xl mx-auto relative z-10 w-full">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
           className="text-center mb-10 sm:mb-12"
         >
-          <h2 className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl text-textPrimary-light mb-4">
+          <h2 className="font-sora font-bold text-3xl sm:text-[36px] md:text-[42px] text-white mb-4">
             About <span className="text-gradient">Me</span>
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto rounded-full mt-4" />
+          <div className="w-24 h-1 bg-accent-gradient mx-auto rounded-full mt-4" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-14 items-center">
-          {/* Left: profile image – entrance from left + continuous horizontal movement */}
+          {/* Left: profile image */}
           <motion.div
-            initial={{ opacity: 0, x: -80 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            variants={slideLeft}
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
             className="flex justify-center md:justify-start order-2 md:order-1"
           >
             <motion.div
@@ -69,46 +52,38 @@ const AboutMe = () => {
               animate={{ x: [0, 12, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             >
-              <div
-                className="absolute inset-0 rounded-full pointer-events-none animate-sunburst"
-                style={{
-                  background: "radial-gradient(circle at 30% 30%, rgba(255, 248, 200, 0.9) 0%, rgba(254, 240, 138, 0.6) 40%, rgba(253, 224, 71, 0.3) 60%, transparent 75%)",
-                  filter: "blur(30px)",
-                  transform: "scale(1.8)",
-                }}
-              />
+              <div className="absolute inset-0 rounded-full pointer-events-none blob-accent opacity-30" style={{ transform: "scale(1.8)", filter: "blur(40px)" }} />
               <motion.img
                 src={abhishekImage}
                 alt="Abhishek Tripathi"
-                className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full object-cover border-4 border-secondary shadow-2xl z-10"
+                className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full object-cover border-2 border-glass shadow-2xl shadow-secondary/20 z-10"
                 whileHover={{ scale: 1.04 }}
                 transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
               />
             </motion.div>
           </motion.div>
 
-          {/* Right: 4+ years + skills – entrance from right + continuous horizontal movement */}
+          {/* Right: experience & skills */}
           <motion.div
-            initial={{ opacity: 0, x: 80 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            variants={slideRight}
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}
             className="order-1 md:order-2 relative"
           >
             <motion.div
               animate={{ x: [0, -10, 0] }}
               transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
             >
-              {/* Single bubble: experience + all skills grouped with movement */}
               <motion.div
-                className="rounded-3xl border-2 border-secondary-light/40 bg-white/85 backdrop-blur-sm shadow-xl p-6 sm:p-8"
+                className="glass-card rounded-3xl p-6 sm:p-8"
                 initial={{ opacity: 0, scale: 0.96 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <motion.p
-                  className="font-poppins font-bold text-2xl sm:text-3xl text-secondary mb-5"
+                  className="font-sora font-bold text-2xl sm:text-3xl text-gradient mb-5"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -117,15 +92,18 @@ const AboutMe = () => {
                   {aboutMe.experienceYears} years experience
                 </motion.p>
 
-                <div className="flex flex-wrap gap-3 sm:gap-4">
+                <motion.div
+                  className="flex flex-wrap gap-3 sm:gap-4"
+                  variants={staggerContainer}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                >
                   {FLOATING_SKILLS.map(({ label, delay, floatDur }) => (
                     <motion.span
                       key={label}
-                      className="inline-block font-poppins font-semibold text-base sm:text-lg md:text-xl text-textPrimary-light px-3 py-1.5 rounded-xl bg-secondary/10 border border-secondary-light/30"
-                      initial={{ opacity: 0, y: 12 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay }}
+                      className="inline-block font-inter font-semibold text-base sm:text-lg md:text-xl text-textSecondary px-3 py-1.5 rounded-xl bg-secondary/10 border border-glass"
+                      variants={staggerItem}
                     >
                       <motion.span
                         className="inline-block"
@@ -139,7 +117,7 @@ const AboutMe = () => {
                       </motion.span>
                     </motion.span>
                   ))}
-                </div>
+                </motion.div>
               </motion.div>
             </motion.div>
           </motion.div>

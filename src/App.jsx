@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import {
   Navbar,
@@ -13,7 +13,7 @@ import {
 
 const App = () => {
   return (
-    <div className="w-full overflow-hidden transition-colors duration-300 min-h-screen">
+    <div className="w-full overflow-hidden transition-colors duration-300 min-h-screen bg-primary grid-bg">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

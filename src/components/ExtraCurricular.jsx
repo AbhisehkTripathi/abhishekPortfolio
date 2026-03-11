@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../style";
 import { extraCurricular } from "../constants";
 import { BsLink45Deg } from "react-icons/bs";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const Content = ({ text, link }) => {
   return (
