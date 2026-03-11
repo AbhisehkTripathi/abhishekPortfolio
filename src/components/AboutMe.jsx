@@ -6,15 +6,15 @@ import { staggerContainer, staggerItem } from "../animations/stagger";
 
 const FLOATING_SKILLS = [
   { label: "System Design", delay: 0, floatDur: 3.2 },
-  { label: "AI Enthusiast", delay: 0.1, floatDur: 4 },
-  { label: "ML", delay: 0.2, floatDur: 3.5 },
-  { label: "NLLB", delay: 0.3, floatDur: 3.8 },
-  { label: "NLP", delay: 0.4, floatDur: 4.2 },
-  { label: "RAG", delay: 0.5, floatDur: 3.6 },
-  { label: "Cloud", delay: 0.6, floatDur: 4.2 },
-  { label: "Backend", delay: 0.7, floatDur: 3.8 },
-  { label: "Frontend", delay: 0.8, floatDur: 3.3 },
-  { label: "Database", delay: 0.9, floatDur: 4.5 },
+  { label: "Healthcare / ABDM", delay: 0.1, floatDur: 4 },
+  { label: "Enterprise AI", delay: 0.2, floatDur: 3.5 },
+  { label: "NLP & LLMs", delay: 0.3, floatDur: 3.8 },
+  { label: "RAG Pipelines", delay: 0.4, floatDur: 4.2 },
+  { label: "Cloud-Native", delay: 0.5, floatDur: 3.6 },
+  { label: "Document Intelligence", delay: 0.6, floatDur: 4.2 },
+  { label: "Full Stack", delay: 0.7, floatDur: 3.8 },
+  { label: "Solution Architecture", delay: 0.8, floatDur: 3.3 },
+  { label: "HealthTech", delay: 0.9, floatDur: 4.5 },
 ];
 
 const AboutMe = () => {

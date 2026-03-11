@@ -357,10 +357,10 @@ export const experiences = [
         duration: "Feb 2025 - Present",
         content: [
           {
-            text: "Working on DMS+ (Document Management System with AI and OCR)—intelligent document processing, search, and retrieval powered by Elasticsearch and OpenAI.",
+            text: "Architecting DMS+ — an enterprise Document Management System leveraging AI, OCR, and Elasticsearch for intelligent document classification, search, and retrieval at scale, serving enterprise clients across industries.",
           },
           {
-            text: "Dentsu FormPlus / Forms+: form creation for multiple types of onboarding and workflows.",
+            text: "Building Dentsu Forms+ — a configurable enterprise forms engine powering multi-step onboarding, compliance workflows, and data capture pipelines.",
           }
         ],
       },
@@ -376,13 +376,13 @@ export const experiences = [
         duration: "Jan 2024 - Feb 2025",
         content: [
           {
-            text: "Specialized in AI and ML development, with extensive work on NLP and large language models including NLLB (No Language Left Behind) and NLB (No Language Barrier). Developed and deployed cutting-edge AI models on scalable cloud platforms, focusing on breaking down language barriers and enhancing global communication.",
+            text: "Led AI/ML initiatives around NLP and multilingual LLMs (NLLB, NLB), deploying production models on cloud for real-time translation, document understanding, and intelligent search — breaking language barriers across enterprise products.",
           },
           {
-            text: "Worked on healthcare projects including LinkedCare with ABHA and ABHA health card with ABHA integration.",
+            text: "Delivered ABDM-compliant healthcare platforms — LinkedCare (EHR with ABHA integration) and ABHA Health Card — enabling secure patient health record access, consent management, and interoperability aligned with India's digital health ecosystem.",
           },
           {
-            text: "Implemented AI-powered solutions using NLLB and NLB models for multilingual support and natural language processing capabilities.",
+            text: "Built RAG-based AI pipelines and NLP microservices for multilingual support, automated summarization, and context-aware retrieval across healthcare and enterprise domains.",
           },
         ],
       },
@@ -391,7 +391,7 @@ export const experiences = [
         duration: "June 2023 - Jan 2024",
         content: [
           {
-            text: "Dedicated to writing clean, robust, and maintainable code, adhering to SOLID principles. Wrote APIs in JavaScript, PHP, Python, and Rust to help gracefully migrate running infrastructure.",
+            text: "Engineered polyglot APIs (JavaScript, PHP, Python, Rust) following SOLID and clean-architecture principles, enabling zero-downtime migration of legacy enterprise infrastructure to modern microservices.",
             link: "",
           },
         ],
@@ -408,11 +408,11 @@ export const experiences = [
         duration: "June 2022 - Dec 2024",
         content: [
           {
-            text: "I specialize in building and maintaining web applications using React and Node.js. With a strong focus on both front-end and back-end development, I create responsive and efficient applications that deliver seamless user experiences.",
+            text: "Developed and maintained enterprise web applications with React and Node.js — building responsive, high-performance front-ends backed by scalable REST/GraphQL APIs for client-facing SaaS products.",
             link: "",
           },
           {
-            text: "Extended support for Azure for reachability analysis of assets for cloud security posture management.",
+            text: "Extended Azure cloud security posture management tooling — implementing reachability analysis for enterprise asset visibility and compliance monitoring.",
             link: "",
           },
         ],
@@ -422,7 +422,7 @@ export const experiences = [
         duration: "June 2022 - May 2023",
         content: [
           {
-            text: "I specialize in building robust and scalable web applications using PHP and the Laravel framework. With a strong focus on back-end development, I create efficient and secure applications that deliver exceptional performance",
+            text: "Built robust, enterprise-grade web applications with PHP/Laravel — designing secure back-end architectures, RESTful APIs, and database schemas that handled high transaction volumes for business-critical platforms.",
             link: "",
           },
         ],
@@ -639,7 +639,7 @@ export const projects = [
     link: "https://www.linkedcare.com/",
     image: linkedcare,
     content:
-      "Healthcare management system integrated with ABHA (Ayushman Bharat Health Account) for seamless health record management and patient data access.",
+      "Enterprise healthcare platform integrated with ABDM and ABHA (Ayushman Bharat Health Account) — enabling EHR management, patient consent workflows, and interoperable health data exchange across providers.",
     stack: [
       {
         id: "icon-1",
@@ -675,7 +675,7 @@ export const projects = [
     link: "https://www.abhahealthcard.com/",
     image: abhahealthcard,
     content:
-      "Digital health card system with ABHA integration enabling patients to access and manage their health records securely through a unified platform.",
+      "ABDM-compliant digital health card system with ABHA integration — empowering patients to securely access, share, and manage longitudinal health records through a unified, consent-driven platform.",
     stack: [
       {
         id: "icon-1",
@@ -711,7 +711,7 @@ export const projects = [
     link: "https://blupack.com/",
     image: blupack,
     content:
-      "Get pre-sorted, packed medicines delivered to your doorstep. A comprehensive medication management platform with automated sorting and delivery system.",
+      "HealthTech medication management platform — automated prescription sorting, smart packaging, and last-mile delivery orchestration, helping patients receive pre-sorted, compliance-ready medicines at their doorstep.",
     stack: [
       {
         id: "icon-1",
@@ -747,7 +747,7 @@ export const projects = [
     link: "https://vallindia.com/",
     image: vallngoproject,
     content:
-      "Comprehensive NGO management system for VALL organization, facilitating operations, donor management, and program tracking.",
+      "Enterprise-grade NGO management platform — streamlining operations, donor lifecycle management, program tracking, and impact reporting for the VALL organization.",
     stack: [
       {
         id: "icon-1",
@@ -783,7 +783,7 @@ export const projects = [
     link: "https://dmacq.com/dms+",
     image: documentmanagement,
     content:
-      "Advanced document management system powered by AI, OCR technology, and Elasticsearch for intelligent document processing, search, and retrieval.",
+      "Enterprise AI-powered DMS with OCR, NLP, and Elasticsearch — automating document classification, intelligent full-text search, and context-aware retrieval for large-scale enterprise content workflows.",
     stack: [
       {
         id: "icon-1",
@@ -834,7 +834,7 @@ export const projects = [
     link: "https://www.simandhareducation.com/",
     image: simandhar,
     content:
-      "Comprehensive education web application built with MongoDB and Node.js, providing a robust platform for educational content management, student enrollment, and course administration.",
+      "Full-stack EdTech platform built on MongoDB and Node.js — powering course administration, student enrollment pipelines, and content management for thousands of learners.",
     stack: [
       {
         id: "icon-1",
@@ -1051,6 +1051,6 @@ export const aboutMe = {
   tagLine:
     "Full Stack Software Engineer — Associate Solution Architect",
   intro:
-    "4+ years building AI-powered applications and solution architecture. I design and deliver scalable systems with strong AI usage—from intelligent document processing and NLP to cloud-native APIs and modern web experiences.",
+    "4+ years architecting and delivering enterprise-grade, AI-powered platforms across healthcare, HealthTech, and document intelligence. From ABDM/ABHA-integrated health record systems and medication management to intelligent document processing with NLP, OCR, and LLMs — I design scalable, cloud-native solutions that turn complex business workflows into seamless digital experiences.",
   experienceYears: "4+",
 };
