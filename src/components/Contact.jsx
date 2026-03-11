@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { AiFillMail, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -51,9 +51,9 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 md:px-16 relative overflow-hidden bg-gradient-to-br from-primary via-white to-primary/80">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full opacity-50 blur-3xl animate-float" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full opacity-50 blur-3xl animate-float-delayed" />
+    <section id="contact" className="py-20 px-4 sm:px-6 md:px-16 relative overflow-hidden bg-primary-sec">
+      <div className="absolute top-0 right-0 w-96 h-96 blob-accent rounded-full opacity-15 animate-float" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 blob-purple rounded-full opacity-15 animate-float-delayed" />
 
       <div className="max-w-2xl mx-auto relative z-10">
         <motion.div
@@ -63,11 +63,11 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="font-poppins font-bold text-3xl sm:text-4xl md:text-5xl text-textPrimary-light mb-4">
+          <h2 className="font-sora font-bold text-3xl sm:text-[36px] md:text-[42px] text-white mb-4">
             <span className="text-gradient">Contact</span>
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto rounded-full" />
-          <p className="font-poppins font-normal text-base sm:text-lg text-textSecondary-light mt-6">
+          <div className="w-24 h-1 bg-accent-gradient mx-auto rounded-full" />
+          <p className="font-inter font-normal text-base sm:text-lg text-textSecondary mt-6">
             Have a project in mind or want to collaborate? I'd love to hear from you!
           </p>
         </motion.div>
@@ -77,13 +77,13 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-10 md:p-12 border border-secondary-light/25 shadow-2xl"
+          className="glass-card rounded-3xl p-6 sm:p-10 md:p-12"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label
                 htmlFor="name"
-                className="block font-poppins font-semibold text-textPrimary-light mb-2"
+                className="block font-inter font-semibold text-textSecondary mb-2"
               >
                 Name
               </label>
@@ -93,11 +93,11 @@ const Contact = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 rounded-xl border-2 bg-white text-textPrimary-light ${
+                className={`w-full px-4 py-3 rounded-xl border bg-card text-white ${
                   errors.name
-                    ? "border-accent2"
-                    : "border-secondary-light/30 focus:border-secondary"
-                } focus:outline-none transition-all duration-300 font-poppins`}
+                    ? "border-red-500"
+                    : "border-glass focus:border-secondary"
+                } focus:outline-none transition-all duration-300 font-inter`}
                 placeholder="Your Name"
               />
               {errors.name && (
@@ -108,7 +108,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block font-poppins font-semibold text-textPrimary-light mb-2"
+                className="block font-inter font-semibold text-textSecondary mb-2"
               >
                 Email
               </label>
@@ -118,11 +118,11 @@ const Contact = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 rounded-xl border-2 bg-white text-textPrimary-light ${
+                className={`w-full px-4 py-3 rounded-xl border bg-card text-white ${
                   errors.email
-                    ? "border-accent2"
-                    : "border-secondary-light/30 focus:border-secondary"
-                } focus:outline-none transition-all duration-300 font-poppins`}
+                    ? "border-red-500"
+                    : "border-glass focus:border-secondary"
+                } focus:outline-none transition-all duration-300 font-inter`}
                 placeholder="your.email@example.com"
               />
               {errors.email && (
@@ -133,7 +133,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="message"
-                className="block font-poppins font-semibold text-textPrimary-light mb-2"
+                className="block font-inter font-semibold text-textSecondary mb-2"
               >
                 Message
               </label>
@@ -143,11 +143,11 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={6}
-                className={`w-full px-4 py-3 rounded-xl border-2 bg-white text-textPrimary-light ${
+                className={`w-full px-4 py-3 rounded-xl border bg-card text-white ${
                   errors.message
-                    ? "border-accent2"
-                    : "border-secondary-light/30 focus:border-secondary"
-                } focus:outline-none transition-all duration-300 font-poppins resize-none`}
+                    ? "border-red-500"
+                    : "border-glass focus:border-secondary"
+                } focus:outline-none transition-all duration-300 font-inter resize-none`}
                 placeholder="Your message here..."
               />
               {errors.message && (
@@ -160,7 +160,7 @@ const Contact = () => {
               disabled={isSubmitting}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full px-6 py-3 bg-secondary text-white font-poppins font-semibold rounded-xl hover:bg-accent transition-all duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-6 py-3 bg-accent-gradient text-white font-inter font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg shadow-secondary/20 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </motion.button>
@@ -169,7 +169,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-secondary/20 text-secondary px-4 py-3 rounded-xl text-center font-poppins font-medium"
+                className="bg-secondary/20 text-secondary px-4 py-3 rounded-xl text-center font-inter font-medium"
               >
                 Message sent successfully! I'll get back to you soon.
               </motion.div>
@@ -177,14 +177,14 @@ const Contact = () => {
           </form>
 
           {/* Social Icons */}
-          <div className="mt-8 pt-8 border-t border-secondary-light/25">
-            <p className="text-center font-poppins font-medium text-textSecondary-light mb-4">
+          <div className="mt-8 pt-8 border-t border-glass">
+            <p className="text-center font-inter font-medium text-textSecondary mb-4">
               Or reach out via:
             </p>
             <div className="flex justify-center gap-6">
               <motion.a
                 href="mailto:abhishektripathi2096a@gmail.com"
-                className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
+                className="w-12 h-12 rounded-full border border-glass flex items-center justify-center text-textSecondary hover:text-secondary hover:border-secondary/50 hover:bg-secondary/10 transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -3 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -194,7 +194,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/abhishek-tripathi-843b11217"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
+                className="w-12 h-12 rounded-full border border-glass flex items-center justify-center text-textSecondary hover:text-secondary hover:border-secondary/50 hover:bg-secondary/10 transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -3 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -204,7 +204,7 @@ const Contact = () => {
                 href="https://github.com/AbhisehkTripathi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
+                className="w-12 h-12 rounded-full border border-glass flex items-center justify-center text-textSecondary hover:text-secondary hover:border-secondary/50 hover:bg-secondary/10 transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -3 }}
                 whileTap={{ scale: 0.9 }}
               >

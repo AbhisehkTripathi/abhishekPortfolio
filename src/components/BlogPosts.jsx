@@ -1,6 +1,6 @@
 import React from "react";
 import { blogPosts } from "../constants";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Button from "./Button";
 
 const BlogPost = (props) => {

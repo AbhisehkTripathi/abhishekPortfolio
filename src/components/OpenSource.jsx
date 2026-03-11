@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { openSourceContributions } from "../constants";
 import { DiGitMerge, DiGitPullRequest } from "react-icons/di";
 import { VscIssues } from "react-icons/vsc";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const Contribution = (props) => {
   return (
